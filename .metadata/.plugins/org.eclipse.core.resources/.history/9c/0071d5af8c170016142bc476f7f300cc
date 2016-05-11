@@ -1,0 +1,26 @@
+package com.coderwurst.methods;
+
+import java.sql.Connection;
+import java.sql.DatabaseMetaData;
+import java.sql.DriverManager;
+
+public class Metadata {
+
+
+	
+	public static void main(String[] args) {
+		
+		 Connection myConn = null;
+
+		 myConn = DriverManager.getConnection(JdbcConstants.DB_URL, JdbcConstants.DB_USERNAME,
+				JdbcConstants.DB_PASSWORD);
+
+		System.out.println("DB connection succesful >>>");
+		
+		DatabaseMetaData meta = myConn.getMetaData();
+		
+		
+
+	}
+
+}

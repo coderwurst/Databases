@@ -1,0 +1,36 @@
+package com.coderwurst.methods;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class JdbcTransaction {
+
+	public static void main(String[] args) {
+		Connection myConn = null;
+		Statement myStmt = null;
+		JdbcHelper helper = new JdbcHelper();
+
+		// 1. connect to DB
+		try {
+			myConn = DriverManager.getConnection(JdbcConnConstants.DB_URL, JdbcConnConstants.DB_USERNAME,
+					JdbcConnConstants.DB_PASSWORD);
+
+			System.out.println("DB connection succesful >>>");
+
+			myConn.setAutoCommit(false); 		// deactivate default auto commit implementation
+			
+			// show salaries before
+			System.out.println("<<< Salaries before");
+			helper.showSalaries(myConn, "HR");
+			helper.showSalaries(myConn, "Engineering");
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}

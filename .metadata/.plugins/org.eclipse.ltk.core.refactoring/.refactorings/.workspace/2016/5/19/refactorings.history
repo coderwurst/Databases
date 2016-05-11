@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;UDemy SQL&apos; to &apos;JDBC - SQL&apos;" description="Rename resource &apos;UDemy SQL&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/UDemy SQL" name="JDBC - SQL" stamp="1462980160034" updateReferences="true"/>
+</session>
