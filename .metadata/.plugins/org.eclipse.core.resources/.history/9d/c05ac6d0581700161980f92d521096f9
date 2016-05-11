@@ -1,0 +1,12 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class JdbcHelper {
+	
+	public void displayEmployee(Connection myConn, String username, String password) {
+		myConn = DriverManager.getConnection(dbUrl, username, password);
+		myRs = myStmt.executeQuery("select * from employees");
+		
+	}
+
+}

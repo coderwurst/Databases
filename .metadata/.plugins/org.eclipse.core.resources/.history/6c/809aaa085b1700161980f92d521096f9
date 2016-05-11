@@ -1,0 +1,8 @@
+
+public class JdbcConnConstants {
+	
+	String DB_URL = "jdbc:mysql://localhost:3306/demo";
+	String DB_USERNAME = "student";
+	String DB_PASSWORD = "student";
+
+}

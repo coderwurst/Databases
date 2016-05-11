@@ -1,0 +1,16 @@
+package com.coderwurst.methods;
+
+import java.sql.DriverManager;
+
+public class JdbcStoredProcedure {
+
+	public static void main(String[] args) {
+		// 1. Get a connection to database
+		myConn = DriverManager.getConnection(JdbcConnConstants.DB_URL, JdbcConnConstants.DB_USERNAME,
+				JdbcConnConstants.DB_PASSWORD);
+
+		// 2. Prepare statement
+		myStmt = myConn.prepareStatement("select * from employees where salary > ? and department=?");
+	}
+
+}
